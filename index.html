@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./master.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video filter</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.svg">
+  </head>
+
+  <body>
+    <video width="1" height="1" style="opacity: 1%;" controls autoplay muted loop></video>
+    <canvas></canvas>
+    <button id="videoStatus">
+      Остановить
+    </button>
+    
+    <fieldset>
+      <legend>Примените фильтр к видео:</legend>
+    
+      <div>
+        <input type="radio" id="invertion" name="filter"/>
+        <label for="invertion">Инвертировать цвета</label>
+      </div>
+    
+      <div>
+        <input type="radio" id="oneColor" name="filter" />
+        <label for="oneColor">Цветоотделение</label>
+        <br>
+        <ul>
+          <li style="color: red;">Red: <input type="checkbox"  id="redOneColor" disabled></li>
+          <li style="color: green">Green: <input type="checkbox"  id="greenOneColor" disabled></li>
+          <li style="color: cyan;">Blue: <input type="checkbox" checked id="blueOneColor" disabled></li>
+        </ul>
+      </div>
+
+      <div>
+        <input type="radio" id="binarization" name="filter" />
+        <label for="binarization">Бинаризация</label>
+        <input type="range" min="0" value="0" max="255" id="binarizationRange" disabled>
+      </div>
+
+      <div>
+        <input type="checkbox" id="monochrom"/>
+        <label for="monochrom">Монохромный серый</label>
+      </div>
+
+      <div>
+        <input type="radio" id="colorEdges" name="filter"/>
+        <label for="colorEdges">Выделить границы</label>
+        <input type="range" min="0" value="128" max="255" id="edgesRange" disabled>
+      </div>
+
+      <button style="margin-top: 10px;" id="clearFilters">Сбросить фильтры</button>
+
+    </fieldset>
+    
+
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>

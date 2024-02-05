@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    max-height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #222020;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+canvas{
+    max-width: 90vw;
+    margin: 10px 0;
+
+}
+
+fieldset{
+    margin: 25px 0 0 0;
+    width: 50vw;
+    padding: 2%;
+    height: 28vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+input{
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button{
+    cursor: pointer;
+    width: 250px;
+    font-weight: bold;
+    padding: 6px 3px;
+    font-size: 20px;
+}
+
+fieldset div{
+    margin: 5px 0;
+}
+
+ul{
+    list-style: none;
+    margin-left: 2.5%;
+    font-weight: bold;
+}
+
+legend{
+    font-weight: bold;
+    color: red;
+    font-size: 30px;
+}
+
